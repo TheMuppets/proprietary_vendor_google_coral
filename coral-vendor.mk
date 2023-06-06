@@ -469,7 +469,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/coral/proprietary/system_ext/lib64/vendor.qti.qspmhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.qspmhal@1.0.so \
     vendor/google/coral/proprietary/system_ext/priv-app/EuiccGoogle/esim-a1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccGoogle/esim-a1.img \
     vendor/google/coral/proprietary/system_ext/priv-app/EuiccGoogle/esim-a2.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccGoogle/esim-a2.img \
-    vendor/google/coral/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v1.img
+    vendor/google/coral/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v1.img \
+    vendor/google/coral/proprietary/vendor/firmware/citadel/FIH-RC1-dev-fusing.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/citadel/FIH-RC1-dev-fusing.ec.bin
 
 PRODUCT_PACKAGES += \
     PixelCameraServicesCoral \
