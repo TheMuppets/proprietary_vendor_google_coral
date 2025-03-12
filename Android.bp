@@ -21915,6 +21915,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/color_init",
             ],
             shared_libs: [
+                "libbase_shim",
                 "libbase",
                 "libc++",
                 "libc",
