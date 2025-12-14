@@ -22473,7 +22473,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-noronha",
             ],
             shared_libs: [
-                "libbase",
+                "libbase-v33",
                 "libbinder",
                 "libcrypto",
                 "libcutils",
@@ -22755,7 +22755,7 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libbinder",
                 "android.frameworks.stats-V1-ndk",
-                "libbase",
+                "libbase-v33",
                 "libbinder_ndk",
                 "libcutils",
                 "libhidlbase",
