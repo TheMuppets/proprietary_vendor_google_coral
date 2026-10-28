@@ -452,6 +452,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/coral/proprietary/vendor/etc/default_coral.mps:$(TARGET_COPY_OUT_VENDOR)/etc/default_coral.mps \
     vendor/google/coral/proprietary/vendor/etc/default_f2proto.mps:$(TARGET_COPY_OUT_VENDOR)/etc/default_f2proto.mps \
     vendor/google/coral/proprietary/vendor/etc/default_flame.mps:$(TARGET_COPY_OUT_VENDOR)/etc/default_flame.mps \
+    vendor/google/coral/proprietary/vendor/etc/init/android.hardware.biometrics.face@1.0-service.google.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.face@1.0-service.google.rc \
     vendor/google/coral/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/google/coral/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google.rc \
     vendor/google/coral/proprietary/vendor/etc/init/android.hardware.confirmationui@1.0-service-google.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.confirmationui@1.0-service-google.rc \
@@ -1336,6 +1337,8 @@ PRODUCT_PACKAGES += \
     lib_profiler \
     lib_sensor_listener \
     libairbrush-pixel \
+    libautocalsolvers \
+    libcamera2ndk_vendor \
     libcertverifier \
     libcom.qti.chinodeutils \
     libdarwinn_client \
@@ -1468,6 +1471,7 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3-service-qti.xml \
     android.hardware.weaver@1.0-service.citadel.xml \
     manifest_android.hardware.drm-service.widevine.xml \
+    manifest_face.xml \
     manifest_input.processor-service.xml \
     rebootescrow-citadel.xml \
     vendor.google.wireless_charger@1.3-service-vendor.xml \
@@ -1482,6 +1486,7 @@ PRODUCT_PACKAGES += \
     diag_mdlog \
     diag_socket_log \
     diag_uart_log \
+    android.hardware.biometrics.face@1.0-service.google \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.camera.provider@2.7-service-google \
     android.hardware.confirmationui@1.0-service-google \

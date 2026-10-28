@@ -18409,6 +18409,71 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libautocalsolvers",
+    owner: "google",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libautocalsolvers.so",
+            ],
+            shared_libs: [
+                "libm",
+                "liblog",
+                "libz",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera2ndk_vendor",
+    owner: "google",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcamera2ndk_vendor.so",
+            ],
+            shared_libs: [
+                "libfmq",
+                "libhidlbase",
+                "libhardware",
+                "libnativewindow",
+                "liblog",
+                "libutils",
+                "libstagefright_foundation",
+                "libcutils",
+                "libcamera_metadata",
+                "libmediandk",
+                "android.frameworks.cameraservice.device@2.0",
+                "android.frameworks.cameraservice.device@2.1",
+                "android.frameworks.cameraservice.common@2.0",
+                "android.frameworks.cameraservice.service@2.0",
+                "android.frameworks.cameraservice.service@2.1",
+                "android.frameworks.cameraservice.service@2.2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcertverifier",
     owner: "google",
     strip: {
@@ -21697,6 +21762,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "manifest_face.xml",
+    owner: "google",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_face.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "manifest_input.processor-service.xml",
     owner: "google",
     src: "proprietary/vendor/etc/vintf/manifest/manifest_input.processor-service.xml",
@@ -22037,6 +22111,58 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.biometrics.face@1.0-service.google",
+    owner: "google",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.biometrics.face@1.0-service.google",
+            ],
+            shared_libs: [
+                "libairbrush-pixel",
+                "libbase-v33",
+                "libbinder_ndk",
+                "libface-calibration-proto",
+                "libface-enroll-proto",
+                "libfaceauth-util",
+                "libhidlbase",
+                "libion",
+                "libkeymaster4_1support",
+                "liblog",
+                "libnos",
+                "libnos_citadeld_proxy",
+                "libnos_client_citadel",
+                "libpng",
+                "libprotobuf-cpp-full-3.9.1-vendorcompat",
+                "libutils",
+                "android.frameworks.stats-V1-ndk",
+                "android.hardware.biometrics.face@1.0",
+                "android.hardware.keymaster@4.1",
+                "android.hardware.thermal@2.0",
+                "libcamera2ndk_vendor",
+                "libbinder",
+                "libstagefright_foundation-v33",
+                "libcutils",
+                "libcamera_metadata",
+                "libmediandk",
+                "libnativewindow",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
     soc_specific: true,
 }
 
